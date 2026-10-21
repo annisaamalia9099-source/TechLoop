@@ -1,0 +1,6 @@
+{
+  "name": "TechLoop - Circular E-Waste Showcase Studio",
+  "description": "Interactive UX demo studio and video showcase for TechLoop: n8n circular e-waste decision engine and Telegram diagnostic bot.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,196 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Noto Sans KR', 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+.font-noto {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+@keyframes springSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.96);
+  }
+  65% {
+    opacity: 1;
+    transform: translateY(-4px) scale(1.01);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes springSlideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  70% {
+    opacity: 1;
+    transform: translateX(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes springScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.85) translateY(12px);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.02) translateY(-2px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseGlowYellow {
+  0%, 100% {
+    box-shadow: 0 0 25px rgba(250, 204, 21, 0.25), 0 0 50px rgba(250, 204, 21, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 45px rgba(250, 204, 21, 0.45), 0 0 90px rgba(250, 204, 21, 0.2);
+  }
+}
+
+.animate-springSlideUp {
+  animation: springSlideUp 0.65s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.animate-springSlideRight {
+  animation: springSlideRight 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.animate-springScale {
+  animation: springScale 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.35s ease-out forwards;
+}
+
+.glow-yellow-pulse {
+  animation: pulseGlowYellow 2.5s infinite ease-in-out;
+}
+
+/* Fading Cross Transition Animation for N8n Workflow Nodes */
+@keyframes fadingCrossIn {
+  0% {
+    opacity: 0.35;
+    transform: scale(0.96) translateY(2px);
+    filter: brightness(0.85);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.03) translateY(-1px);
+    filter: brightness(1.25);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: brightness(1);
+  }
+}
+
+@keyframes fadingCrossOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.7;
+    transform: scale(0.98);
+  }
+}
+
+@keyframes nodeAuraCrossfade {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7), 0 0 15px rgba(16, 185, 129, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(16, 185, 129, 0), 0 0 32px rgba(16, 185, 129, 0.65);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.3), 0 0 18px rgba(16, 185, 129, 0.35);
+  }
+}
+
+@keyframes packetTravel {
+  0% {
+    left: 0%;
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  25% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  75% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+    transform: scale(0.6);
+  }
+}
+
+@keyframes crossBeamScan {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.8;
+  }
+  60% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.animate-fadingCrossIn {
+  animation: fadingCrossIn 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.animate-fadingCrossOut {
+  animation: fadingCrossOut 0.4s ease-out forwards;
+}
+
+.animate-nodeAuraCrossfade {
+  animation: nodeAuraCrossfade 2s infinite ease-in-out;
+}
+
+.animate-packetTravel {
+  animation: packetTravel 0.85s ease-in-out infinite;
+}
+
+.animate-crossBeamScan {
+  animation: crossBeamScan 1.4s ease-in-out infinite;
+}
